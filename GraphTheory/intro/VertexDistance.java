@@ -6,6 +6,7 @@ public class VertexDistance<T> {
 	private T vertex;
 	private T prevVertex;
 	private int distance;
+	private int approxDistance = Integer.MAX_VALUE;
 	
 	public VertexDistance(T vertex, int distance) {
 		this.vertex = vertex;
@@ -22,6 +23,10 @@ public class VertexDistance<T> {
 	
 	public int getDistance() {
 		return distance;
+	}
+	
+	public int getApproxDistance() {
+		return approxDistance;
 	}
 	
 	public String getPath(Map<T, VertexDistance<T>> path) {
@@ -42,6 +47,10 @@ public class VertexDistance<T> {
 	
 	public void setDistance(int distance) {
 		this.distance = distance;
+	}
+	
+	public void setApproxDistance(int approxDistance) {
+		this.approxDistance = approxDistance;
 	}
 	
 	

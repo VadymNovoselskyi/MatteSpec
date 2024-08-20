@@ -3,8 +3,12 @@ package intro;
 import java.util.HashMap;
 import java.util.Map;
 
+import intro.Edge;
+
 public class Vertex<T> {
 	private T element;
+	private int x;
+	private int y;
 	public boolean visited = false;
 	
 	private Map<Vertex<T>, Edge<T>> adjacenyMap = new HashMap<Vertex<T>, Edge<T>>();
@@ -13,8 +17,19 @@ public class Vertex<T> {
 		this.element = element;
 	}
 	
+	public Vertex(T element, int x, int y) {
+		this.element = element;
+		this.x = x;
+		this.y = y;
+	}
+	
 	public T getElement() {
 		return element;
+	}
+	
+	public int[] getCoord() {
+		int[] coord = {x, y};
+		return coord;
 	}
  
     public int getWeight(Vertex<T> vertex){ 
