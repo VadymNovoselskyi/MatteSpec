@@ -20,8 +20,7 @@ public class LinkedList<T> {
 			head = newNode;
 		}
 		else { //om nyskapade node är inte den första	
-			Node<T> prevNode = getNode(size - 1);
-			prevNode.next = newNode; //tilldela newNode som värde på pointer till föregående node
+			tail.next = newNode; //tilldela newNode som värde på pointer till föregående node
 		}
 		
 		tail = newNode; //newNode är nu den sista node i listan
