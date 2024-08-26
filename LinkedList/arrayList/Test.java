@@ -1,4 +1,4 @@
-package arrayList;
+ package arrayList;
 
 public class Test {
 
@@ -9,16 +9,14 @@ public class Test {
 		test.add(2);
 		test.add(4);
 		test.add(5);
-		for(int i = 0; i < test.getSize(); i++) {
-			System.out.println(test.get(i));
-		}
+		System.out.println(test.toString());
 		test.insert(3, 2);
 		test.add(10);
 		test.removeLast();
 		System.out.println();
-		for(int i = 0; i < test.getSize(); i++) {
-			System.out.println(test.get(i));
-		}
+		
+		System.out.println(test.toString());
+		System.out.println(test.toRevertString());
 	}
 
 }
