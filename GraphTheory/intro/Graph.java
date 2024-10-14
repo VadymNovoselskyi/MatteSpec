@@ -129,7 +129,7 @@ public class Graph<T> {
    				if(!isVisited(to)) {
    					int edgeWeight = getWeight(from, to);
    					int newDistance = fromVertex.getDistance() + edgeWeight;
-   					int approxDistance = fromVertex.getDistance() + edgeWeight + heuristic(from, to);
+   					int approxDistance = fromVertex.getDistance() + edgeWeight + heuristic(to, endVertex);
    					
    					VertexDistance<T> toVertex = distanceMap.get(to);
    					
